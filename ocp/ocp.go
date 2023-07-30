@@ -2,6 +2,7 @@ package ocp
 
 import (
 	"fmt"
+	after "github.com/jubolanos/solid-principles/ocp/after"
 
 	"github.com/jubolanos/solid-principles/ocp/before"
 )
@@ -9,14 +10,17 @@ import (
 func Run() {
 
 	fmt.Println("Open Closed Principle...")
-	circle := before.Circle{Radius: 5}
+	beforeCircle := before.Circle{Radius: 5}
+	beforeSquare := before.Square{Length: 10}
+	beforeCalculator := before.Calculator{}
+	beforeTotalSum := beforeCalculator.SumAllAreas(&beforeCircle, &beforeSquare)
 
-	square := before.Square{Length: 10}
+	afterCircle := after.Circle{Radius: 5}
+	afterSquare := after.Square{Length: 10}
+	afterCalculator := after.Calculator{}
+	afterTotalSum := afterCalculator.SumAllAreas(&afterCircle, &afterSquare)
 
-	calculator := before.Calculator{}
-
-	totalSum := calculator.SumAllAreas(circle, square)
-
-	fmt.Println("The total sum is: ", totalSum)
+	fmt.Println("BEFORE: The total sum is: ", beforeTotalSum)
+	fmt.Println("AFTAR: The total sum is: ", afterTotalSum)
 
 }
