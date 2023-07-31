@@ -10,6 +10,7 @@ import (
 func main() {
 	fmt.Println("Learn SOLID principles.")
 	srp.Run()
+
 	ocp.Run()
 
 }

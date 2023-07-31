@@ -3,19 +3,24 @@ package ocp
 import (
 	"fmt"
 
-	"github.com/jubolanos/solid-principles/ocp/before"
+	"github.com/jubolanos/solid-principles/ocp/after"
 )
 
 func Run() {
 
 	fmt.Println("Open Closed Principle...")
-	circle := before.Circle{Radius: 5}
+	// circle := before.Circle{Radius: 5}
+	//square := before.Square{Length: 10}
+	// calculator := before.Calculator{}
+	// totalSum := calculator.SumAllAreas(circle, square)
 
-	square := before.Square{Length: 10}
+	circle := after.Circle{Radius: 10}
+	square := after.Square{Length: 8}
+	triangle := after.Triangle{Base: 12, Height: 6}
 
-	calculator := before.Calculator{}
+	ocpCalculator := after.Calculator{}
 
-	totalSum := calculator.SumAllAreas(circle, square)
+	totalSum := ocpCalculator.SumAllAreas(circle, square, triangle)
 
 	fmt.Println("The total sum is: ", totalSum)
 
