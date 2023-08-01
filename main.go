@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/jubolanos/solid-principles/lsp"
 	"github.com/jubolanos/solid-principles/ocp"
 	"github.com/jubolanos/solid-principles/srp"
 )
@@ -12,5 +13,5 @@ func main() {
 	srp.Run()
 
 	ocp.Run()
-
+	lsp.Run()
 }

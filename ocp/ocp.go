@@ -8,6 +8,7 @@ import (
 
 func Run() {
 
+	fmt.Print("==============================\n")
 	fmt.Println("Open Closed Principle...")
 	// circle := before.Circle{Radius: 5}
 	//square := before.Square{Length: 10}

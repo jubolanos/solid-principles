@@ -7,6 +7,7 @@ import (
 )
 
 func Run() {
+	fmt.Print("==============================\n")
 	fmt.Print("SRP Running... \n")
 
 	fileName := "./resources/cities.csv"
