@@ -9,7 +9,7 @@ import (
 
 func Run() {
 	fmt.Print("SRP Running... \n")
-	// Before()
+	Before()
 	After()
 }
 
